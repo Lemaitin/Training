@@ -9,7 +9,8 @@ namespace EF.CodeFirst.Training.DataModel
         {
         }
 
-        public DbSet<User> Users { get; set; }
+        public DbSet<UserGenderModel> UsersGender { get; set; }
+        public DbSet<UserModel> Users { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -24,7 +25,10 @@ namespace EF.CodeFirst.Training.DataModel
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-
+            modelBuilder.Entity<UserGenderModel>()
+                .HasOne(x => x.User)
+                .WithOne(x => x.Gender)
+                .HasForeignKey<UserModel>(x => x.GenderId);
         }
     }
 }

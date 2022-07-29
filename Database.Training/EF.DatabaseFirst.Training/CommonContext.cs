@@ -33,7 +33,7 @@ namespace EF.DatabaseFirst.Training
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<UserModel>(entity =>
-            {
+            {        
                 entity.Property(e => e.Email)
                     .IsRequired()
                     .HasMaxLength(50)

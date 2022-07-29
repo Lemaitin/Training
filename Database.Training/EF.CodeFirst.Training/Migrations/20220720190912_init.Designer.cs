@@ -11,8 +11,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EF.CodeFirst.Training.Migrations
 {
     [DbContext(typeof(UserContext))]
-    [Migration("20220719115144_salary")]
-    partial class salary
+    [Migration("20220720190912_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,13 +23,37 @@ namespace EF.CodeFirst.Training.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("EF.CodeFirst.Training.DataModel.User", b =>
+            modelBuilder.Entity("EF.CodeFirst.Training.DataModel.UserGenderModel", b =>
                 {
-                    b.Property<int>("UserId")
+                    b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int");
 
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("UserId"), 1L, 1);
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Gender")
+                        .IsRequired()
+                        .HasMaxLength(30)
+                        .HasColumnType("nvarchar(30)");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId")
+                        .IsUnique();
+
+                    b.ToTable("UsersGender");
+                });
+
+            modelBuilder.Entity("EF.CodeFirst.Training.DataModel.UserModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
 
                     b.Property<string>("Email")
                         .IsRequired()
@@ -40,11 +64,6 @@ namespace EF.CodeFirst.Training.Migrations
                         .IsRequired()
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
-
-                    b.Property<string>("Gender")
-                        .IsRequired()
-                        .HasMaxLength(30)
-                        .HasColumnType("nvarchar(30)");
 
                     b.Property<string>("LastName")
                         .IsRequired()
@@ -61,9 +80,26 @@ namespace EF.CodeFirst.Training.Migrations
                         .HasMaxLength(30)
                         .HasColumnType("nvarchar(30)");
 
-                    b.HasKey("UserId");
+                    b.HasKey("Id");
 
                     b.ToTable("Users");
+                });
+
+            modelBuilder.Entity("EF.CodeFirst.Training.DataModel.UserGenderModel", b =>
+                {
+                    b.HasOne("EF.CodeFirst.Training.DataModel.UserModel", "User")
+                        .WithOne("Gender")
+                        .HasForeignKey("EF.CodeFirst.Training.DataModel.UserGenderModel", "UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("EF.CodeFirst.Training.DataModel.UserModel", b =>
+                {
+                    b.Navigation("Gender")
+                        .IsRequired();
                 });
 #pragma warning restore 612, 618
         }

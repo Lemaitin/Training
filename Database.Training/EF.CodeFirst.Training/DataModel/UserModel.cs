@@ -2,10 +2,8 @@
 
 namespace EF.CodeFirst.Training.DataModel
 {
-    public class User
+    public class UserModel : BaseModel
     {
-        public int UserId { get; set; }
-
         [MaxLength(50)]
         public string FirstName { get; set; }
 
@@ -19,9 +17,9 @@ namespace EF.CodeFirst.Training.DataModel
         public string PhoneNumber { get; set; }
 
         [MaxLength(30)]
-        public string Gender { get; set; }
-
-        [MaxLength(30)]
         public string Salary { get; set; }
+
+        public UserGenderModel Gender { get; set; }
+        public int GenderId { get; set; }
     }
 }
