@@ -7,7 +7,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ADO.Net.Training", "ADO.Net
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.DatabaseFirst.Training", "EF.DatabaseFirst.Training\EF.DatabaseFirst.Training.csproj", "{51A3D91E-8BF8-439A-9CC5-AAA8624BA937}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EF.CodeFirst.Training", "EF.CodeFirst.Training\EF.CodeFirst.Training.csproj", "{814B322F-4321-44DC-9891-2B76D7D8E29B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EF.CodeFirst.Training", "EF.CodeFirst.Training\EF.CodeFirst.Training.csproj", "{814B322F-4321-44DC-9891-2B76D7D8E29B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Query.Training", "Query.Training", "{4509D589-86F3-4AAC-AEE9-31B6C0B6F590}"
+	ProjectSection(SolutionItems) = preProject
+		SqlQuery_1.sql = SqlQuery_1.sql
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
