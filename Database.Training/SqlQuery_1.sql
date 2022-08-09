@@ -38,8 +38,7 @@ CONSTRAINT Fk_Users_Secrets FOREIGN KEY (UserId) REFERENCES Users(UserId),
 CONSTRAINT FK_Categories_Secrets FOREIGN KEY (CategoriesId) REFERENCES Categories(CategoriesId)
 )
 
-
-
+----------------------------------TRIGGER-----------------------------------------------
 USE SecretManagerDB;
 GO
 CREATE TRIGGER Trigger_AuditSecret_Record
@@ -52,10 +51,7 @@ FROM inserted
 
 
 ----------------------------------PROCEDURE-----------------------------------------------
-INSERT
-
-
-USE SecretManagerDB;
+--------INSERT----------
 GO
 CREATE PROCEDURE InsertCategories
 @CategoriesId INT,
@@ -72,8 +68,6 @@ SELECT * FROM Categories
 WHERE CategoriesId = @CategoriesId AND Name = @Name
 END
 GO
-EXECUTE InsertCategories
-@Name = 'GYM'
 
 
 USE SecretManagerDB;
@@ -117,10 +111,7 @@ WHERE Value = @Value
 END
 GO
 
-
-UPDATE
-
-
+--------UPDATE----------
 Use SecretManagerDB;
 GO
 CREATE PROCEDURE UpdateCategories
@@ -133,7 +124,6 @@ WHERE CategoriesId = @CategoriesId
 END
 
 
-Use SecretManagerDB;
 GO
 CREATE PROCEDURE UpdateUsers
 @UserId INT,
@@ -150,7 +140,6 @@ FirstName = @FirstName, LastName = @LastName, Login = @Login, MasterKey = @Maste
 WHERE UserId = @UserId
 END
 
-Use SecretManagerDB;
 GO
 CREATE PROCEDURE UpdateSecrets
 @SecretId INT,
@@ -162,14 +151,11 @@ AS
 BEGIN
 UPDATE Secrets
 SET 
-Value= @Value, ExperationDate= @ExperationDate, UserId= @UserId, CategoriesId= @CategoriesId,
+Value= @Value, ExperationDate= @ExperationDate, UserId= @UserId, CategoriesId= @CategoriesId
 WHERE SecretId = @SecretId
 END
 
-
-DELETE
-
-Use SecretManagerDB;
+--------DELETE----------
 GO
 CREATE PROCEDURE DeleteCategories
 @CategoriesId INT,
