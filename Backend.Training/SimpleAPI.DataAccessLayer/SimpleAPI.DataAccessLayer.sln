@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32825.248
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.DataAccessLayer", "SimpleAPI.DataAccessLayer\SimpleAPI.DataAccessLayer.csproj", "{F1F355E3-B9B3-44AE-A95C-02DEEB563359}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F1F355E3-B9B3-44AE-A95C-02DEEB563359}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1F355E3-B9B3-44AE-A95C-02DEEB563359}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1F355E3-B9B3-44AE-A95C-02DEEB563359}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1F355E3-B9B3-44AE-A95C-02DEEB563359}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {57E32724-1100-4667-B3B2-DD5CF15C4885}
+	EndGlobalSection
+EndGlobal

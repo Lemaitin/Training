@@ -1,4 +1,4 @@
-namespace SimpleAPI
+namespace SimpleAPI.DataAccessLayer
 {
     public class WeatherForecast
     {
