@@ -10,8 +10,8 @@ namespace SimpleAPI.DataAccessLayer
         {
 
         }
-        public DbSet<AccountModel> Account => Set<AccountModel>();
-        public DbSet<CategoriesModel> Categories => Set<CategoriesModel>();
-        public DbSet<SecretsModel> Secrets => Set<SecretsModel>();
+        public DbSet<SecretModel> Account => Set<SecretModel>();
+        public DbSet<CategoryModel> Categories => Set<CategoryModel>();
+        public DbSet<AccountModel> Secrets => Set<AccountModel>();
     }
 }

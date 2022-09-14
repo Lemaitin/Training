@@ -2,10 +2,8 @@
 
 namespace SimpleAPI.DataAccessLayer.Models
 {
-    public class SecretsModel
+    public class AccountModel : BaseModel
     {
-        [Key]
-        public int SecretId { get; set; }
         public string Name { get; set; } = string.Empty;
         public string Login { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
