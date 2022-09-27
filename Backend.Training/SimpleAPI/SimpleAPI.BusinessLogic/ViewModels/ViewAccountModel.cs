@@ -1,6 +1,6 @@
-﻿namespace SimpleAPI.DataAccessLayer.Models
+﻿namespace SimpleAPI.BusinessLogicLayer.ViewModels
 {
-    public class AccountModel : BaseModel
+    public class ViewAccountModel : BaseViewModel
     {
         public string Name { get; set; } = string.Empty;
         public string Login { get; set; } = string.Empty;

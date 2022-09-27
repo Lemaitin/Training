@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SimpleAPI.DataAccessLayer.Models;
+using System.Reflection;
 
 namespace SimpleAPI.DataAccessLayer
 
@@ -10,8 +11,14 @@ namespace SimpleAPI.DataAccessLayer
         {
 
         }
-        public DbSet<SecretModel> Account => Set<SecretModel>();
+
+        public DbSet<SecretModel> Secrets => Set<SecretModel>();
         public DbSet<CategoryModel> Categories => Set<CategoryModel>();
-        public DbSet<AccountModel> Secrets => Set<AccountModel>();
+        public DbSet<AccountModel> Account => Set<AccountModel>();
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+        }
     }
 }

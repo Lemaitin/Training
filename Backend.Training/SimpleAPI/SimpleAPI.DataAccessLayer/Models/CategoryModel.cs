@@ -1,9 +1,6 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿namespace SimpleAPI.DataAccessLayer.Models;
 
-namespace SimpleAPI.DataAccessLayer.Models
+public class CategoryModel : BaseModel
 {
-    public class CategoryModel : BaseModel
-    {
-        public string CategoryName { get; set; } = string.Empty;
-    }
+    public string CategoryName { get; set; } = string.Empty;
 }

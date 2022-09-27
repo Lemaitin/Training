@@ -5,7 +5,9 @@ VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI", "SimpleAPI\SimpleAPI.csproj", "{03812BDD-C33F-4165-8606-3F9B13595675}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleAPI.DataAccessLayer", "SimpleAPI.DataAccessLayer\SimpleAPI.DataAccessLayer.csproj", "{6A6FAB1E-1864-4E2F-A0C9-9A73CFAD42E5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.DataAccessLayer", "SimpleAPI.DataAccessLayer\SimpleAPI.DataAccessLayer.csproj", "{6A6FAB1E-1864-4E2F-A0C9-9A73CFAD42E5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SimpleAPI.BusinessLogicLayer", "SimpleAPI.BusinessLogic\SimpleAPI.BusinessLogicLayer.csproj", "{DE3658DB-F2E9-4B44-A1B5-BC12A4D5CFE9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6A6FAB1E-1864-4E2F-A0C9-9A73CFAD42E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6A6FAB1E-1864-4E2F-A0C9-9A73CFAD42E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6A6FAB1E-1864-4E2F-A0C9-9A73CFAD42E5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE3658DB-F2E9-4B44-A1B5-BC12A4D5CFE9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE3658DB-F2E9-4B44-A1B5-BC12A4D5CFE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE3658DB-F2E9-4B44-A1B5-BC12A4D5CFE9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE3658DB-F2E9-4B44-A1B5-BC12A4D5CFE9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
